@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+ .container{
+   display:flex;	 
+   height: 90vh;
+   justify-content: center;
+   align-items: center;
+   
+ }
+ .selection-container{
+   padding: 15px;	 
+   border: 1px solid black;
+   height: 600px;
+   background-color: pink;
+ }
+ .tools-container{
+  padding: 4px; 
+ }
+ nav{
+   background-color: pink;	 
+   padding: 10px;
+ }
+ #canvas{
+    border: 1px solid black;	    
+   cursor : url(pencil.png) 0 10,auto;
+ }
+
+ .color{
+   height: 40px;
+   width:40px;
+   border:none;
+   border-radius: 50%;	 
+ }
+ .utilities{
+   display: flex;
+   flex-direction: column;
+ }
+#pencil{
+ background-image: url('pencil.png');	
+ height: 30px;
+ width: 30px;
+ background-repeat: no-repeat;
+}
+#eraser{
+  background-image: url('rectangle.png');
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+#circle{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+#circle:hover::before{
+   content:'Circle';	
+  position: relative;
+  top: 25px;
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  padding: 7px;
+	
+}
+#eraser:hover::before{
+  content:'Eraser';	
+  position: relative;
+  top: 25px;
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  padding: 7px;
+}
+#pencil:hover::before{
+  content:'Pencil';	
+  position: relative;
+  top: 25px;
+  border: 2px solid black;
+  color: white;
+  background-color: black;
+  padding: 7px;
+}
