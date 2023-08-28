@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <style>
-    #canvas{
-      border: 1px solid black;	    
-      cursor : url(pencil.png) 0 10,auto;
-     }
-     .btn-container{
-        display:flex;	     
-     }
-   </style>
+   <link rel="stylesheet" href="style.css">	  
+   <title>Draw Anything</title>
   </head>
   <body>
-    <canvas tabindex="1" id = "canvas" width ="900" height = "600"></canvas>
- 
-     <div class = "btn-container">
-        <button id="btn-red">Red</button>
-        <button id="btn-green">Green</button>
-	<button id="btn-circle">Circle</button>
-	<button id="eraser">Eraser</button>
-	<button id="bucket">Bucket</button>
+   <nav>
+     <div>
+	 <h2>Draw Anything</h2>    
+     </div>	   
+   </nav>	  
+   <div class = "container">
+     <div class = "selection-container">
+	 <h3>Select a Tool</h3>  
+	 <div class = "tools-container">
+             <button id= "pencil"></button>
+	     <button id= "eraser"></button>
+	     <button id= "circle"></button>
+	 </div>
+	 <div class="utilities">
+	    <label for="color-picker">Select a Color:</label>
+            <input type="color" id="color-picker"class = "color" value="#ff0000">
+	    <label for="rangeSlider">Thickness:</label>
+	    <input type="range" min="1" max="10" value="5" class="slider" id="rangeSlider">
+	 </div>
      </div>	  
+
+    <canvas tabindex="1" id = "canvas" width ="900" height = "600"></canvas>
+   </div>
+
     <script src = "index.js"></script>
   </body>	  
 </html>
